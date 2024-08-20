@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background">
+
+        <include
+            android:id="@+id/fragmentTitle"
+            layout="@layout/fragment_title_desc_layout" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingStart="@dimen/margin_16dp"
+            android:paddingEnd="@dimen/margin_16dp">
+
+    <ImageView
+        android:id="@+id/verificationIcon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/otps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+    <LinearLayout
+        android:id="@+id/layout_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:weightSum="6"
+        app:layout_constraintTop_toBottomOf="@id/verificationIcon">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TI_IdNo"
+            style="@style/otp_box"
+            android:layout_width="@dimen/code_box"
+            android:layout_height="@dimen/code_box"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_one"
+                style="@style/otp_text"
+                tools:text="5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_two"
+            style="@style/otp_box"
+            android:layout_width="@dimen/code_box"
+            android:layout_height="@dimen/code_box"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_two"
+                style="@style/otp_text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_three"
+            style="@style/otp_box"
+            android:layout_width="@dimen/code_box"
+            android:layout_height="@dimen/code_box"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_three"
+                style="@style/otp_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/otp_box"
+            android:layout_width="@dimen/code_box"
+            android:layout_height="@dimen/code_box"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_four"
+                style="@style/otp_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/otp_box"
+            android:layout_width="@dimen/code_box"
+            android:layout_height="@dimen/code_box"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_five"
+                style="@style/otp_text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/otp_box"
+            android:layout_width="@dimen/code_box"
+            android:layout_height="@dimen/code_box"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_six"
+                style="@style/otp_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/black_text"
+        android:layout_marginTop="15dp"
+        tools:text="Relax we will automatically verify the code in 0:24"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/sourcesans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/layout_code" />
+
+    <TextView
+        android:id="@+id/resendCode"
+        style="@style/black_text"
+        android:layout_width="wrap_content"
+        android:text="@string/resend_code"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:textSize="20sp"
+        android:fontFamily="@font/sourcesans_bold"
+        android:textColor="@color/grey_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

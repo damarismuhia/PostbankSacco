@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/serviceDetailsFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.ServiceDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_service_details" />
+    <fragment
+        android:id="@+id/viewMySubscriptionFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.ViewMySubscriptionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_view_my_subscription"/>
+
+    <fragment
+        android:id="@+id/authTransactionFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.confirmtransactions.AuthTransactionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_auth_transaction"/>
+
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.SuccessFragment"
+        tools:layout="@layout/fragment_success"
+        android:label="" />
+    <fragment
+        android:id="@+id/miniStatementFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.enquiries.MiniStatementFragment"
+        android:label=""
+        tools:layout="@layout/fragment_mini_statement" />
+</navigation>

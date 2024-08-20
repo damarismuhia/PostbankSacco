@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lands"
+    android:paddingBottom="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/header_text"
+            android:text="@string/welcome_to_postbanks"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/sourcesans_bold"
+            android:lineSpacingExtra="-8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/tv_sub_title"
+            style="@style/black_text"
+            android:text="Tujijenge Pamoja."
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sourcesans_bold"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_cx"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_title">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_help"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/white_rounded_bg"
+                android:drawableTop="@drawable/ic_about"
+                android:drawablePadding="7dp"
+                android:padding="15dp"
+                android:text="@string/about_us"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_About_Us"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_About_Us"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/white_rounded_bg"
+                android:drawableTop="@drawable/products"
+                android:drawablePadding="7dp"
+                android:layout_marginEnd="8dp"
+                android:padding="15dp"
+                android:text="@string/product"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_help"
+                app:layout_constraintEnd_toStartOf="@+id/tv_ContactUs"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_help"
+                app:layout_constraintTop_toTopOf="@id/tv_help" />
+
+            <TextView
+                android:id="@+id/tv_ContactUs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:background="@drawable/white_rounded_bg"
+                android:drawableTop="@drawable/cx"
+                android:padding="15dp"
+                android:drawablePadding="7dp"
+                android:text="Support Centre"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_About_Us"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_About_Us"
+                app:layout_constraintTop_toTopOf="@+id/tv_About_Us" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGetStarted"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:text="@string/get_started"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="false"
+        android:background="@drawable/login_bg"
+        app:backgroundTint="@color/white"
+
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/sourcesans_bold"
+        app:layout_constraintBottom_toTopOf="@id/cl_support"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

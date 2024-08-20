@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">Postbank Sacco</string>
+    <string name="get_started">Get Started</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="national_id">National ID</string>
+    <string name="member_number">Member Number</string>
+    <string name="accountLookUp_txt">Account Verification</string>
+    <string name="account_lookUp_desc_txt">Let’s check whether you have an account with us</string>
+    <string name="resend_code"> <u>Resend Code</u></string>
+    <string name="We_have_sent_verification_code_to">Wait for the 6-digit verification code we have sent to %s. The code will be automatically detected."</string>
+    <string name="resend_code_in">Resend the verification code <b>in %s sec.</b></string>
+    <string name="verification_code">Device Verification</string>
+    <string name="_0">0</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="forgot_pin">Forgot Pin?</string>
+    <string name="error_msg_no_biometric_hardware">No biometric hardware Detected</string>
+    <string name="error_msg_biometric_hw_unavailable">Biometric Hardware Unavailable</string>
+    <string name="error_msg_biometric_not_setup">Device biometric is not enrolled</string>
+    <string name="prompt_info_title">Biometric  Authentication</string>
+    <string name="prompt_info_subtitle">Please use your fingerprint to login</string>
+    <string name="prompt_info_description">Login to Your Account using Biometric authentication</string>
+    <string name="prompt_info_use_app_password">Use App PIN</string>
+
+
+    <string name="password">Password</string>
+    <string name="con_password">Confirm Password</string>
+    <string name="email_address">Email Address</string>
+    <string name="valid_email_address">Provide a valid email address</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="good_night">Good Night</string>
+    <string name="good_afternoon">Good Afternoon</string>
+    <string name="good_evening">Good Evening</string>
+    <string name="full_name">First Name</string>
+    <string name="surname">Surname</string>
+    <string name="dob">Date of Birth</string>
+    <string name="register">Register</string>
+    <string name="fill_the_details">Please fill up this form to activate an account</string>
+    <string name="provide_the_following_details_to_access_your_account">Login to access your account</string>
+    <string name="login">Login</string>
+    <string name="explore_a_world_of_subscription_services_and_enjoy_exclusive_offers">Explore a World of Subscription Services and Enjoy Exclusive Offers.</string>
+    <string name="welcome_to_postbanks">Welcome to \nPostbank SACCO.</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="enter_your_pin">Enter your PIN to login</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="service_details">Service Details</string>
+    <string name="see_all">See All</string>
+    <string name="active_subscriptions_will_appear_here">Active Subscriptions will appear here!</string>
+    <string name="unable_to_fetch_data">unable to fetch data</string>
+    <string name="here_is_a_list_of_all_your_subscriptions">Here is a list of all your subscriptions</string>
+    <string name="my_subscriptions">My Subscriptions</string>
+    <string name="all_done">All Done</string>
+
+
+    <string name="email_your_sms_confirmation_shorttly">Your request has been received and is being processed. Your statement will be sent to your email shortly</string>
+    <string name="your_sms_confirmation_shorttly">Your request has been received and is being processed. You will receive an SMS confirmation shortly.</string>
+    <string name="emulators_des">This Application is not Authorised to run on Emulators and Virtual Devices</string>
+    <string name="msg_pass_code">This Application is not Authorised to run on Devices, without a Unlock Lock Passcode or Pattern, Please set one to proceed</string>
+    <string name="rooted_devices_des">Your Phone is Rooted and this Application is not Authorised to run on rooted Devices</string>
+    <string name="msg_missing_sim_card">This Application is not Authorised to run on Device without a SimCard, Please insert a SimCard to proceed</string>
+    <string name="sorry">Sorry</string>
+    <string name="skip">Skip</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="locate_us">Locate Us</string>
+    <string name="product">Our Products</string>
+    <string name="secret_key_name">postbank_sacco_biometric_encryption_key2</string>
+    <string name="cancel">Cancel</string>
+    <string name="activate">Activate</string>
+    <string name="what_would_you_like_to_do_today">What would you like to do today?</string>
+    <string name="transactions">Transactions</string>
+    <string name="enter_pin_to_authorize_transaction">Enter PIN to authorize the transaction</string>
+    <string name="confirm">Confirm</string>
+    <string name="show_balance">Show Balance</string>
+    <string name="hide_balance">Hide Balance</string>
+    <string name="ministatement">Mini-statement</string>
+    <string name="confirm_balance_enquiry">Confirm Balance Enquiry</string>
+    <string name="confirm_mini_enquiry">Confirm Mini-statement Request</string>
+    <string name="confirm_full_enquiry">Confirm Full-statement Request</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="your_statement_will_be_sent_to_your_registered_email_address">Your statement will be sent to your registered email address.</string>
+    <string name="continu">Continue</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="date_amp_time"><![CDATA[Date & Time:]]></string>
+
+</resources>

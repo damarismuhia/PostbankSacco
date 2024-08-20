@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id "kotlin-parcelize"
+}
+
+android {
+    namespace 'com.android.postbanksacco'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.android.postbanksacco"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            // Specifies the ABI configurations of your native
+            // libraries Gradle should build and package with your APK.
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            jniDebuggable false
+            // signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures{
+        viewBinding = true
+    }
+    externalNativeBuild {
+        cmake {
+            path file('src/CMakeLists.txt')
+        }
+    }
+    ndkVersion '20.0.5594570'
+
+}
+
+dependencies {
+
+    api 'androidx.core:core-ktx:1.13.1'
+    api 'androidx.appcompat:appcompat:1.6.1'
+    api 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-common-ktx:2.7.7'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    // --------Navigation------------------------------
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.7'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.7'
+    // --------Hilt Dependency Injection------------------------------
+    implementation 'com.google.dagger:hilt-android:2.45'
+    kapt 'com.google.dagger:hilt-compiler:2.45'
+
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+    implementation "com.airbnb.android:lottie:6.0.0"
+
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.7"
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
+    implementation 'com.scottyab:rootbeer-lib:0.1.0'
+    implementation "com.google.android.gms:play-services-auth:21.2.0"
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
+    implementation "com.jakewharton.timber:timber:5.0.1"
+    implementation 'androidx.biometric:biometric:1.2.0-alpha05'
+}
+kapt {
+    correctErrorTypes = true
+}

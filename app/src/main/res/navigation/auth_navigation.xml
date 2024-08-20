@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_navigation"
+    app:startDestination="@id/landingFragment">
+
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.android.postbanksacco.ui.fragments.auth.onboarding.LandingFragment"
+        android:label=""
+        tools:layout="@layout/fragment_landing" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.android.postbanksacco.ui.fragments.auth.RegisterFragment"
+        android:label=""
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.android.postbanksacco.ui.fragments.auth.login.LoginFragment"
+        android:label=""
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/slidersFragment"
+        android:name="com.android.postbanksacco.ui.fragments.auth.onboarding.SlidersFragment"
+        tools:layout="@layout/fragment_sliders"
+        android:label="" />
+    <fragment
+        android:id="@+id/memberCheckFragment"
+        android:name="com.android.postbanksacco.ui.fragments.auth.onboarding.MemberCheckFragment"
+       tools:layout="@layout/fragment_member_check"
+        android:label="" />
+    <fragment
+        android:id="@+id/accountVerificationFragment"
+        android:name="com.android.postbanksacco.ui.fragments.auth.onboarding.AccountVerificationFragment"
+        android:label=""
+        tools:layout="@layout/fragment_account_verification"
+        />
+    <fragment
+        android:id="@+id/deviceVerificationFragment"
+        android:name="com.android.postbanksacco.ui.fragments.auth.onboarding.DeviceVerificationFragment"
+        android:label=""
+        tools:layout="@layout/fragment_device_verification" />
+</navigation>

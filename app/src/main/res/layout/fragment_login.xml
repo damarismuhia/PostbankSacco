@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:background="@drawable/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.auth.login.LoginFragment"
+   >
+    <ImageView
+        android:id="@+id/iv_login"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="-50dp"
+        android:src="@drawable/main_logo"/>
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/header_text"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/colorPrimaryDark"
+        tools:text="Good Morning,Damaris" />
+    <TextView
+        android:id="@+id/tv_sub_title"
+        style="@style/black_text"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/enter_your_pin" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_keyPad"
+        app:layout_constraintTop_toBottomOf="@id/tv_sub_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <View
+            android:id="@+id/pin1"
+            style="@style/pin_views"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/pin2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/pin2"
+            style="@style/pin_views"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/pin3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pin1"
+            app:layout_constraintTop_toTopOf="@+id/pin1" />
+
+        <View
+            android:id="@+id/pin3"
+            style="@style/pin_views"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/pin4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pin2"
+            app:layout_constraintTop_toTopOf="@+id/pin2" />
+
+        <View
+            android:id="@+id/pin4"
+            style="@style/pin_views"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pin3"
+            app:layout_constraintTop_toTopOf="@+id/pin3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl_keyPad"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/cl_pin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_one"
+            style="@style/keypad_buttons_style"
+            android:text="@string/_1"
+            app:layout_constraintBottom_toTopOf="@+id/btn_four"
+            app:layout_constraintEnd_toStartOf="@+id/btn_two"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_two"
+            style="@style/keypad_buttons_style"
+            android:text="@string/_2"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_three"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_one"
+            app:layout_constraintTop_toTopOf="@+id/btn_one" />
+
+        <Button
+            android:id="@+id/btn_three"
+            style="@style/keypad_buttons_style"
+            android:layout_marginStart="4dp"
+            android:text="@string/_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_two"
+            app:layout_constraintTop_toTopOf="@+id/btn_one" />
+
+        <Button
+            android:id="@+id/btn_four"
+            style="@style/keypad_buttons_style"
+            android:text="@string/_4"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_seven"
+            app:layout_constraintEnd_toStartOf="@+id/btn_five"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_one" />
+
+        <Button
+            android:id="@+id/btn_five"
+            style="@style/keypad_buttons_style"
+            android:text="@string/_5"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_six"
+            app:layout_constraintStart_toEndOf="@+id/btn_four"
+            app:layout_constraintTop_toTopOf="@+id/btn_four" />
+
+        <Button
+            android:id="@+id/btn_six"
+            style="@style/keypad_buttons_style"
+            android:text="@string/_6"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_three"
+            app:layout_constraintStart_toEndOf="@+id/btn_five"
+            app:layout_constraintTop_toTopOf="@+id/btn_five" />
+
+        <Button
+            android:id="@+id/btn_seven"
+            style="@style/keypad_buttons_style"
+            android:text="@string/_7"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_zero"
+            app:layout_constraintEnd_toStartOf="@+id/btn_eight"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_four" />
+
+        <Button
+            android:id="@+id/btn_eight"
+            style="@style/keypad_buttons_style"
+            android:text="@string/_8"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_nine"
+            app:layout_constraintStart_toEndOf="@+id/btn_seven"
+            app:layout_constraintTop_toTopOf="@+id/btn_seven" />
+
+        <Button
+            android:id="@+id/btn_nine"
+            style="@style/keypad_buttons_style"
+            android:text="@string/_9"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_eight"
+            app:layout_constraintTop_toTopOf="@+id/btn_eight" />
+
+        <ImageView
+            android:id="@+id/btn_useFingerprint"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_fingerprint"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_zero"
+            app:layout_constraintEnd_toStartOf="@+id/btn_zero"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/btn_seven"
+            app:layout_constraintTop_toTopOf="@id/btn_zero"/>
+
+        <Button
+            android:id="@+id/btn_zero"
+            style="@style/keypad_buttons_style"
+            android:text="@string/_0"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_forgotPin"
+            app:layout_constraintEnd_toStartOf="@+id/btn_Delete"
+            app:layout_constraintStart_toEndOf="@+id/btn_useFingerprint"
+            app:layout_constraintTop_toBottomOf="@+id/btn_eight"/>
+
+        <ImageView
+            android:id="@+id/btn_Delete"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="@id/btn_zero"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_nine"
+            app:layout_constraintTop_toTopOf="@+id/btn_zero" />
+        <Button
+            android:id="@+id/tv_forgotPin"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:lineSpacingExtra="12sp"
+            android:text="@string/forgot_pin"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="15dp"
+            android:textStyle="normal"
+            android:fontFamily="@font/sourcesans_semibold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_zero" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
