@@ -14,6 +14,7 @@ import android.view.View
 import android.widget.TextView
 import com.android.postbanksacco.R
 import com.android.postbanksacco.utils.EncryptedPref
+import timber.log.Timber
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
@@ -181,6 +182,22 @@ fun generateTransactionRef(): String {
     return (1..11)
         .map { allowedChars.random() }
         .joinToString("")
+}
+fun String.maskAccount(): String {
+    return this.replace("(?<=.{4}).(?=.{3})".toRegex(), "*")
+}
+fun formatContact(unformatContact: String): String {
+    val formatedPhone: String
+    if (unformatContact.startsWith("+254")) {
+        formatedPhone = "0" + (unformatContact.substring(4))
+        Timber.d("FORMATED PHONE $formatedPhone")
+    } else if (unformatContact.startsWith("254")) {
+        formatedPhone = "0" + (unformatContact.substring(3))
+        Timber.d("FORMAT PHONE $formatedPhone")
+    } else {
+        formatedPhone = unformatContact
+    }
+    return formatedPhone
 }
 fun String.formatDate(): String {
     val inputFormatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ", Locale.getDefault())

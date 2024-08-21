@@ -37,6 +37,7 @@ import com.android.postbanksacco.utils.extensions.currency
 import com.android.postbanksacco.utils.extensions.formatDigits
 import com.android.postbanksacco.utils.extensions.fosaBal
 import com.android.postbanksacco.utils.extensions.navigateNext
+import com.android.postbanksacco.utils.extensions.navigateToHome
 import com.android.postbanksacco.utils.extensions.navigateWithArgs
 import com.android.postbanksacco.utils.extensions.pickRegDob
 import com.android.postbanksacco.utils.extensions.readItemFromPref
@@ -198,7 +199,7 @@ class HomeFragment : TransactionBaseFragment<FragmentHomeBinding, MainViewModel>
                         if (progressDialog.isShowing) {
                             progressDialog.dismiss()
                             mBottomSheetDialog?.dismiss()
-                            navigateWithArgs(R.id.successFragment,args)
+                            navigateToHome(R.id.successFragment,args)
                         }
                     }
 
@@ -219,7 +220,14 @@ class HomeFragment : TransactionBaseFragment<FragmentHomeBinding, MainViewModel>
 
 }
     override fun navigateTo(obj: HomeModel) {
-
+        when(obj.code.lowercase()){
+            "deposit"->{
+                navigateNext(R.id.depositFragment)
+            }
+            "airtime"->{
+                navigateNext(R.id.airtimeFragment)
+            }
+        }
     }
 
 

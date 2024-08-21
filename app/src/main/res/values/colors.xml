@@ -9,7 +9,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey_100">#A5A5A5</color>
+
+
     <color name="grey_dark">#525252</color>
+    <color name="grey">#707070</color>
     <color name="grey_light">#F7F7F7</color>
     <color name="green">#006400</color>
     <color name="btn_transparent">#266289C6</color>

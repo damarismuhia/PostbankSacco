@@ -15,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.android.postbanksacco.R
+import com.android.postbanksacco.data.model.ServiceProviderItems
 import com.android.postbanksacco.databinding.ActionDialogBinding
 import com.android.postbanksacco.utils.EncryptedPref
 import com.android.postbanksacco.utils.makeGone
@@ -129,6 +130,16 @@ fun Fragment.showErrorDialog(progressDialog: SweetAlertDialog,error:String?,canS
     }
 
 }
+fun mnoOptions() : MutableList<ServiceProviderItems> {
+    return mutableListOf(
+        ServiceProviderItems(R.drawable.ic_mpesa, "M-PESA", "safaricom"),
+
+        ServiceProviderItems(R.drawable.airtel, "AIRTEL MONEY", "airtel"),
+    )
+
+}
+
+
 
 fun showSuccessAlertDialog(
     progressDialog: SweetAlertDialog,

@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.android.postbanksacco.data.model.ContactModel
 import com.google.gson.Gson
 import com.android.postbanksacco.data.network.ApiResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -35,6 +36,7 @@ class MainViewModel @Inject constructor(private val repo: GeneralRepo, applicati
         _authSuccess.value = null
     }
     var transactionList = MutableLiveData<List<TransactionsModel>>()
+    var contactModel = MutableLiveData<ContactModel>()
 
 
 

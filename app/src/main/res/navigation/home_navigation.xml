@@ -10,16 +10,6 @@
         android:name="com.android.postbanksacco.ui.fragments.home.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/serviceDetailsFragment"
-        android:name="com.android.postbanksacco.ui.fragments.home.ServiceDetailsFragment"
-        android:label=""
-        tools:layout="@layout/fragment_service_details" />
-    <fragment
-        android:id="@+id/viewMySubscriptionFragment"
-        android:name="com.android.postbanksacco.ui.fragments.home.ViewMySubscriptionFragment"
-        android:label=""
-        tools:layout="@layout/fragment_view_my_subscription"/>
 
     <fragment
         android:id="@+id/authTransactionFragment"
@@ -37,4 +27,19 @@
         android:name="com.android.postbanksacco.ui.fragments.home.enquiries.MiniStatementFragment"
         android:label=""
         tools:layout="@layout/fragment_mini_statement" />
+    <fragment
+        android:id="@+id/depositFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.deposit.DepositFragment"
+        android:label=""
+        tools:layout="@layout/fragment_deposit"/>
+    <fragment
+        android:id="@+id/airtimeFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.airtime.AirtimeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_airtime"/>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.contacts.ContactFragment"
+        android:label=""
+        tools:layout="@layout/fragment_contact"/>
 </navigation>

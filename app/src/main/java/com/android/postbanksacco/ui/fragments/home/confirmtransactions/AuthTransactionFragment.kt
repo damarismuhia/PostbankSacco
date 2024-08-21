@@ -164,7 +164,6 @@ class AuthTransactionFragment : TransactionBaseFragment<FragmentAuthTransactionB
 
 
     private fun proceedOnSuccess() {
-
         findNavController().navigateUp()
     }
 
@@ -186,14 +185,6 @@ class AuthTransactionFragment : TransactionBaseFragment<FragmentAuthTransactionB
                     pinCount = 2
                     EncryptedPref.writePreference(requireContext(), CacheKeys.done_onboarding, "true")
                     progressDialog.dismiss()
-                    if (enrollFingerPrint) {
-                        EncryptedPref.writePreference(requireContext(),
-                            CacheKeys.setIsFingerPrintEnrolled,"true")
-                        if (this@AuthTransactionFragment::cryptoObjectData.isInitialized){
-                            EncryptedPref.writePreference(requireContext(),
-                                CacheKeys.secureFinger,cryptoObjectData)
-                        }
-                    }
                     viewModel._authSuccess.postValue(true)
                     proceedOnSuccess()
                 }else{
