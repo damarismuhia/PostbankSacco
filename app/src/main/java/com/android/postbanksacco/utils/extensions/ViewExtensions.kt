@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.postbanksacco.data.adapters.ServiceProviderAdapter
 import com.android.postbanksacco.data.model.LinkedAccount
+import com.android.postbanksacco.data.model.ServiceProviderItems
 import com.android.postbanksacco.ui.dialog.TransactionDialogAdapter
 import com.android.postbanksacco.ui.dialog.TransactionsModel
 import es.dmoral.toasty.Toasty
@@ -81,11 +82,14 @@ fun AutoCompleteTextView.setMnoData() {
         this.setText(selectedItem?.title, false)
     }
 }
-fun AutoCompleteTextView.populateTransactional(isDebitable:Boolean) {
+
+fun AutoCompleteTextView.populateTransactional(isDebitable:Boolean,isCreditable:Boolean=false) {
     val list = LinkedAccount.getLinkedAccounts()
     val sourceAccList = if (isDebitable) {
         list.filter { linkedAccount -> linkedAccount.isTransactional }
-    } else {
+    } else if (isCreditable) {
+        list.filter { linkedAccount -> !linkedAccount.isTransactional }
+    }else{
         list
     }
 

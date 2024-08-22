@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/requestList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Cl_loan_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="@drawable/white_rounded_bg"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <View
+            android:id="@+id/vw"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/circle_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/initials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="18sp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/vw"
+            app:layout_constraintEnd_toEndOf="@id/vw"
+            app:layout_constraintStart_toStartOf="@id/vw"
+            app:layout_constraintTop_toTopOf="@id/vw"
+            tools:text="DM" />
+
+        <ImageView
+            android:id="@+id/viewLine"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:src="@drawable/ic_mpesa"
+            app:layout_constraintBottom_toBottomOf="@+id/vw"
+            app:layout_constraintEnd_toEndOf="@id/vw"
+            app:layout_constraintStart_toStartOf="@id/vw"
+            app:layout_constraintTop_toTopOf="@id/vw" />
+
+        <TextView
+            android:id="@+id/tvLoantitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/vw"
+            app:layout_constraintEnd_toStartOf="@id/iv_back"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Personal Loan" />
+
+        <TextView
+            android:id="@+id/text_limit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@id/iv_back"
+            app:layout_constraintStart_toStartOf="@+id/tvLoantitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoantitle"
+            tools:text="fund_transfer" />
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/bank_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

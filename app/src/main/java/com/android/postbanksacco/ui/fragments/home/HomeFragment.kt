@@ -121,7 +121,7 @@ class HomeFragment : TransactionBaseFragment<FragmentHomeBinding, MainViewModel>
     }
     private fun getCharges(type: String){
         if (!progressDialog.isShowing){
-            progressDialog.show()
+            showLoadingAlert(progressDialog)
         }
         CoroutineScope(Dispatchers.Main).launch {
             delay(1100)
@@ -192,7 +192,7 @@ class HomeFragment : TransactionBaseFragment<FragmentHomeBinding, MainViewModel>
                         putString("fragmentType", "full")
                     }
                     if (!progressDialog.isShowing){
-                        progressDialog.show()
+                        showLoadingAlert(progressDialog)
                     }
                     CoroutineScope(Dispatchers.Main).launch {
                         delay(1500)
@@ -219,10 +219,13 @@ class HomeFragment : TransactionBaseFragment<FragmentHomeBinding, MainViewModel>
     autoPlayAdvertisement(binding.pager)
 
 }
-    override fun navigateTo(obj: HomeModel) {
+    override fun navigateTo(pos:Int,obj: HomeModel) {
         when(obj.code.lowercase()){
             "deposit"->{
                 navigateNext(R.id.depositFragment)
+            }
+            "ft"->{
+                navigateNext(R.id.homeFTFragment)
             }
             "airtime"->{
                 navigateNext(R.id.airtimeFragment)

@@ -6,15 +6,11 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.android.postbanksacco.R
-import com.android.postbanksacco.data.adapters.ServiceProviderAdapter
 import com.android.postbanksacco.databinding.FragmentDepositBinding
 import com.android.postbanksacco.databinding.LookupDialogBinding
 import com.android.postbanksacco.ui.dialog.TransactionConfirmationDialog.Companion.showTransactionConfirmDialog
@@ -25,18 +21,13 @@ import com.android.postbanksacco.utils.Validators
 import com.android.postbanksacco.utils.extensions.chargeAmnt
 import com.android.postbanksacco.utils.extensions.currency
 import com.android.postbanksacco.utils.extensions.formatDigits
-import com.android.postbanksacco.utils.extensions.fosaBal
-import com.android.postbanksacco.utils.extensions.mnoOptions
 import com.android.postbanksacco.utils.extensions.navigateNext
 import com.android.postbanksacco.utils.extensions.navigateToHome
-import com.android.postbanksacco.utils.extensions.navigateWithArgs
 import com.android.postbanksacco.utils.extensions.populateTransactional
 import com.android.postbanksacco.utils.extensions.readItemFromPref
-import com.android.postbanksacco.utils.extensions.setEditTextEndIcon
 import com.android.postbanksacco.utils.extensions.setMnoData
 import com.android.postbanksacco.utils.extensions.showErrorDialog
 import com.android.postbanksacco.utils.extensions.showLoadingAlert
-import com.android.postbanksacco.utils.extensions.showToast
 import com.android.postbanksacco.utils.makeGone
 import com.android.postbanksacco.utils.makeVisible
 import com.android.postbanksacco.viewmodels.MainViewModel
@@ -45,7 +36,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 
 @AndroidEntryPoint
@@ -150,7 +140,7 @@ class DepositFragment : TransactionBaseFragment<FragmentDepositBinding, MainView
             }
             btnSubmit.setOnClickListener {
                 if (!progressDialog.isShowing){
-                    progressDialog.show()
+                    showLoadingAlert(progressDialog)
                 }
                 CoroutineScope(Dispatchers.Main).launch {
                     delay(1000)
@@ -179,7 +169,7 @@ class DepositFragment : TransactionBaseFragment<FragmentDepositBinding, MainView
     }
     private fun getCharges(){
         if (!progressDialog.isShowing){
-            progressDialog.show()
+            showLoadingAlert(progressDialog)
         }
         CoroutineScope(Dispatchers.Main).launch {
             delay(1000)
@@ -218,7 +208,7 @@ class DepositFragment : TransactionBaseFragment<FragmentDepositBinding, MainView
             putString("fragmentType", "deposit")
         }
         if (!progressDialog.isShowing){
-            progressDialog.show()
+            showLoadingAlert(progressDialog)
         }
         CoroutineScope(Dispatchers.Main).launch {
             delay(1500)

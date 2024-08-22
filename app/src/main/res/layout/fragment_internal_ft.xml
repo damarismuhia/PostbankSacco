@@ -45,70 +45,14 @@
                     android:inputType="number"
                     android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
-
-
-
             <TextView
-                android:id="@+id/tv_depositFrom"
+                android:id="@+id/tv_depositTo"
                 style="@style/black_text"
-                android:text="Mobile Details:"
+                android:text="@string/transfer_to"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tl_amount" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tl_mno"
-                style="@style/DropDownTextField"
-                android:drawableStart="@drawable/ic_mpesa"
-                android:hint="@string/select_mobile_money"
-                android:visibility="visible"
-                app:errorEnabled="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_depositFrom">
-
-                <AutoCompleteTextView
-                    android:id="@+id/spMno"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:focusable="false"
-                    android:importantForAutofill="no"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:singleLine="true">
-
-                </AutoCompleteTextView>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phoneTF"
-                style="@style/OutlinedTextField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/phone_number"
-                app:errorEnabled="true"
-                app:layout_constraintTop_toBottomOf="@+id/tl_mno">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPhonenumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/flag"
-                    android:importantForAutofill="no"
-                    android:inputType="number"
-                    android:singleLine="true" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/tv_depositTo"
-                style="@style/black_text"
-                android:text="@string/deposit_to"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/phoneTF" />
 
             <include
                 android:id="@+id/ll_select"
@@ -120,11 +64,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_depositTo" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/ll_to"
+            <LinearLayout
+                android:id="@+id/layout_own"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll_select">
@@ -139,19 +85,38 @@
                     app:placeholderText="Select Account">
 
                     <AutoCompleteTextView
-                        android:id="@+id/spAccount"
+                        android:id="@+id/spCreditAccount"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:focusable="false"
                         android:singleLine="true" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+                <include
+                    android:id="@+id/ll_own_source"
+                    layout="@layout/layout_source_account"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_depositTo" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_select">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tl_accNo"
                     style="@style/OutlinedTextField"
                     android:hint="@string/member_account_number"
-                    android:visibility="gone"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +137,6 @@
                     android:id="@+id/tl_accName"
                     style="@style/OutlinedTextField"
                     android:hint="Account Name"
-                    android:visibility="gone"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -187,7 +151,22 @@
                         android:inputType="text"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                <include
+                    android:id="@+id/ll_other_source"
+                    layout="@layout/layout_source_account"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_depositTo" />
+            </LinearLayout>
+
+
+
+
+
+
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSubmit"

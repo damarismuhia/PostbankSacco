@@ -178,9 +178,6 @@ class LoginFragment : BaseAuthFragment<FragmentLoginBinding, AuthViewModel>(Frag
         }
         val phone = readItemFromPref(CacheKeys.PHONE_NUMBER)
         CoroutineScope(Dispatchers.Main).launch {
-            if (!progressDialog.isShowing) {
-                showLoadingAlert(progressDialog)
-            }
             delay(2500)
             if (progressDialog.isShowing) {
 

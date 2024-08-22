@@ -42,4 +42,24 @@
         android:name="com.android.postbanksacco.ui.fragments.home.contacts.ContactFragment"
         android:label=""
         tools:layout="@layout/fragment_contact"/>
+    <fragment
+        android:id="@+id/homeFTFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.ft.HomeFTFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home_f_t"/>
+    <fragment
+        android:id="@+id/mobileMoneyFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.ft.mobilemoney.MobileMoneyFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home_f_t" />
+    <fragment
+        android:id="@+id/momoFtFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.ft.mobilemoney.MomoFtFragment"
+        android:label=""
+        tools:layout="@layout/fragment_momo_ft"/>
+    <fragment
+        android:id="@+id/internalFtFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.ft.internal.InternalFtFragment"
+        android:label=""
+        tools:layout="@layout/fragment_internal_ft"/>
 </navigation>

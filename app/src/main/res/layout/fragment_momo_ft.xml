@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <include
+        android:id="@+id/fragmentTitle"
+        layout="@layout/fragment_title_desc_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragmentTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_amount"
+                style="@style/OutlinedTextField"
+                android:layout_marginTop="8dp"
+                android:hint="@string/amount"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="Enter Amount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/tv_option"
+                style="@style/black_text"
+                android:text="@string/send_to"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tl_amount" />
+            <include
+                android:id="@+id/ll_select"
+                layout="@layout/fragment_radio_btn_option"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_option" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneTF"
+                style="@style/OutlinedTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_number"
+                app:errorEnabled="true"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/ll_select">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhonenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/flag"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_option_from"
+                style="@style/black_text"
+                android:text="@string/send_from"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneTF" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_account"
+                style="@style/DropDownTextField"
+                android:hint="@string/debit_account"
+                app:errorEnabled="true"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_option_from"
+                app:placeholderText="Select Account">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmit"
+                style="@style/button_primary"
+                android:layout_width="match_parent"
+                android:text="@string/continu"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,8 @@ import com.android.postbanksacco.utils.makeVisible
 import java.util.Objects
 var currency:String = "Ksh"
 var chargeAmnt:String = "0"
-var duty:String = "0"
+var chargedAmnt:String = "10"
+var duty:String = "2"
 var fosaBal:String = "Ksh 45,765.00"
 fun getNavOptions(): NavOptions {
     return NavOptions.Builder()
@@ -135,6 +136,14 @@ fun mnoOptions() : MutableList<ServiceProviderItems> {
         ServiceProviderItems(R.drawable.ic_mpesa, "M-PESA", "safaricom"),
 
         ServiceProviderItems(R.drawable.airtel, "AIRTEL MONEY", "airtel"),
+    )
+
+}
+fun topupOptions() : MutableList<ServiceProviderItems> {
+    return mutableListOf(
+            ServiceProviderItems(R.drawable.saf, "Safaricom", "SAFARICOM_TOPUP"),
+            ServiceProviderItems(R.drawable.airtel, "Airtel", "AIRTEL_TOPUP"),
+
     )
 
 }

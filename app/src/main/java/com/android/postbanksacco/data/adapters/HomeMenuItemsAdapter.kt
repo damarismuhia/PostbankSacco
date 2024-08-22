@@ -24,8 +24,8 @@ class HomeMenuItemsAdapter(
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bind(position)
     }
-    private fun handleNavigation(objc:HomeModel) {
-        menuItemClick.navigateTo(objc)
+    private fun handleNavigation(position: Int,objc:HomeModel) {
+        menuItemClick.navigateTo(position,objc)
     }
 
     override fun getItemCount() = data.size
@@ -37,7 +37,7 @@ class HomeMenuItemsAdapter(
             binding.tvName.text = currentItem.title
             binding.ivIcon.setImageResource(currentItem.image)
 
-            binding.layout.setOnClickListener { handleNavigation(currentItem) }
+            binding.layout.setOnClickListener { handleNavigation(position,currentItem) }
 
         }
     }

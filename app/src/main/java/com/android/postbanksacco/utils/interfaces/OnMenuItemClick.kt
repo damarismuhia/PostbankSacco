@@ -7,7 +7,7 @@ import com.android.postbanksacco.data.response.SubscriboData
 
 
 interface OnMenuItemClick {
-    fun navigateTo(obj: HomeModel)
+    fun navigateTo(pos:Int,obj: HomeModel)
 }
 
 interface ContactCallBack {

@@ -47,14 +47,18 @@
 
 
     <string name="how_much_deposit">How much would you like to deposit?</string>
+    <string name="how_much_transfer">How much would you like to transfer?</string>
     <string name="how_much_airtime">How much airtime would you like to buy?</string>
+    <string name="how_much_send">How much would you like to send?</string>
     <string name="who_would_you_like_airtime">Who would you like to buy airtime for?</string>
     <string name="depositto_acc">Deposit to Account</string>
     <string name="buy_airtime">Buy Airtime</string>
+    <string name="internal_ft">Internal Transfer</string>
 
 
     <string name="buy_for">Buy For:</string>
-    <string name="debit_account">Debit Account</string>
+    <string name="send_to">Send To:</string>
+    <string name="debit_account">Select Debit Account</string>
     <string name="source_account">Source Account:</string>
 
 
@@ -83,6 +87,8 @@
     <string name="msg_missing_sim_card">This Application is not Authorised to run on Device without a SimCard, Please insert a SimCard to proceed</string>
     <string name="sorry">Sorry</string>
     <string name="skip">Skip</string>
+
+
     <string name="contact_us">Contact Us</string>
     <string name="about_us">About Us</string>
     <string name="locate_us">Locate Us</string>
@@ -97,11 +103,17 @@
     <string name="show_balance">Show Balance</string>
     <string name="hide_balance">Hide Balance</string>
     <string name="ministatement">Mini-statement</string>
+    <string name="fund_transfer">Fund Transfer</string>
+    <string name="momo_transfer">Mobile Money Transfer</string>
+    <string name="where_to_ft">Where would you like to transfer funds to?</string>
+    <string name="where_to_momo">Where would you like to send money to??</string>
     <string name="confirm_balance_enquiry">Confirm Balance Enquiry</string>
     <string name="confirm_mini_enquiry">Confirm Mini-statement Request</string>
     <string name="confirm_full_enquiry">Confirm Full-statement Request</string>
     <string name="confirm_deposit_to_acc">Confirm Deposit to Account Request</string>
     <string name="confirm_airtime">Confirm Airtime Purchase Request</string>
+    <string name="confirm_send">Confirm %1$s Request</string>
+    <string name="confirm_ft">Confirm %1$s Transfer Request</string>
     <string name="start_date">Start Date</string>
     <string name="end_date">End Date</string>
     <string name="your_statement_will_be_sent_to_your_registered_email_address">Your statement will be sent to your registered email address.</string>
@@ -109,14 +121,19 @@
     <string name="thank_you">Thank you!</string>
     <string name="date_amp_time"><![CDATA[Date & Time:]]></string>
     <string name="amount">Amount</string>
+    <string name="amont">Amount:</string>
     <string name="deposit_to">Deposit To:</string>
     <string name="credit_account">Select Credit Account</string>
     <string name="own_account">Own Account</string>
     <string name="other_account">Other Account</string>
+    <string name="member_account">Member Account</string>
     <string name="select_mobile_money">Select Mobile Money Operator</string>
     <string name="service_provider">Service Provider</string>
     <string name="deposit_from">Deposit From:</string>
     <string name="member_account_number">Member Account Number</string>
+    <string name="send_from">Send From:</string>
+    <string name="transfer_to">Transfer To:</string>
+    <string name="transfer_from">Transfer From:</string>
 
 
 </resources>

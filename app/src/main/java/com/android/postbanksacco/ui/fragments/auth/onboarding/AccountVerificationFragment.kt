@@ -57,9 +57,9 @@ class AccountVerificationFragment : BaseAuthFragment<FragmentAccountVerification
 
     private fun hardCodeData() {
         if (BuildConfig.DEBUG) {
-            binding.etMemberId.setText("S4027")
-            binding.etPhonenumber.setText("0718194920")
-            binding.etNationalId.setText("34189136")
+//            binding.etMemberId.setText("S4027")
+//            binding.etPhonenumber.setText("0718194920")
+//            binding.etNationalId.setText("34189136")
         }
     }
     private fun validData(): Boolean {
