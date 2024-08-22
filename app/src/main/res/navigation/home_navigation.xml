@@ -62,4 +62,14 @@
         android:name="com.android.postbanksacco.ui.fragments.home.ft.internal.InternalFtFragment"
         android:label=""
         tools:layout="@layout/fragment_internal_ft"/>
+    <fragment
+        android:id="@+id/billsHomeFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.billpayments.BillsHomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home_f_t" />
+    <fragment
+        android:id="@+id/billPaymentFragment"
+        android:name="com.android.postbanksacco.ui.fragments.home.billpayments.BillPaymentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bill_payment" />
 </navigation>

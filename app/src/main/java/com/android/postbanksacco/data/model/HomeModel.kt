@@ -71,5 +71,31 @@ data class HomeModel(
             )
         }
 
+        fun getBillMenusItems():ArrayList<HomeModel>{
+            return arrayListOf(
+                HomeModel(R.drawable.dstv,
+                    "DSTV",
+                    "dstv"),
+                HomeModel(R.drawable.gotv,
+                    "GOTV",
+                    "gotv"),
+                HomeModel(R.drawable.zuku,
+                    "ZUKU TV",
+                    "zukutv"),
+                HomeModel(R.drawable.zuku,
+                    "ZUKU Internet",
+                    "zukuinternet"),
+                HomeModel(R.drawable.access_kenya,
+                    "Access Kenya",
+                    "accesskenya"),
+                HomeModel(R.drawable.kplc,
+                    "KPLC Postpaid",
+                    "kplc"),
+                HomeModel(R.drawable.water,
+                    "Nairobi Water & Sewerage",
+                    "water"),
+            )
+        }
+
     }
 }

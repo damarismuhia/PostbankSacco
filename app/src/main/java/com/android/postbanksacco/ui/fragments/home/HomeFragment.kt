@@ -230,6 +230,9 @@ class HomeFragment : TransactionBaseFragment<FragmentHomeBinding, MainViewModel>
             "airtime"->{
                 navigateNext(R.id.airtimeFragment)
             }
+            "bill"->{
+                navigateNext(R.id.billsHomeFragment)
+            }
         }
     }
 

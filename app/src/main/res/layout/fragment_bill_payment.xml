@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <include
+        android:id="@+id/fragmentTitle"
+        layout="@layout/fragment_title_desc_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragmentTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentTitle">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_preAccount"
+                style="@style/OutlinedTextField"
+                android:layout_marginTop="8dp"
+                android:hint="@string/account_number"
+                app:errorEnabled="true"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderText="Enter Account Number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_preAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/cl_fields"
+               android:layout_width="match_parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               android:visibility="visible"
+               app:layout_constraintTop_toTopOf="parent"
+               android:layout_height="wrap_content">
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tl_current_amount"
+                   style="@style/OutlinedTextField"
+                   android:layout_marginTop="8dp"
+                   android:hint="Current Bill"
+                   app:errorEnabled="true"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:placeholderText="Current Bill">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/et_current_amount"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:enabled="false"
+                       android:importantForAutofill="no"
+                       android:inputType="number"
+                       android:singleLine="true" />
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tl_amount"
+                   style="@style/OutlinedTextField"
+                   android:hint="@string/amount"
+                   app:errorEnabled="true"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/tl_current_amount"
+                   app:placeholderText="Enter Amount">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/et_amount"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:importantForAutofill="no"
+                       android:inputType="number"
+                       android:singleLine="true" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tl_meter_no"
+                   style="@style/OutlinedTextField"
+                   android:hint="@string/account_number"
+                   app:errorEnabled="true"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/tl_amount"
+                   app:placeholderText="Enter Account Number">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/et_meterNo"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:importantForAutofill="no"
+                       android:inputType="text"
+                       android:singleLine="true" />
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tl_accName"
+                   style="@style/OutlinedTextField"
+                   android:hint="Account Name"
+                   app:errorEnabled="true"
+                   app:placeholderText="Enter Account Name"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/tl_meter_no">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/et_accName"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:importantForAutofill="no"
+                       android:inputType="text"
+                       android:singleLine="true" />
+               </com.google.android.material.textfield.TextInputLayout>
+               <include
+                   android:id="@+id/ll_source"
+                   layout="@layout/layout_source_account"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/tl_accName" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmit"
+                style="@style/button_primary"
+                android:layout_width="match_parent"
+                android:text="@string/continu"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -104,8 +104,10 @@
     <string name="hide_balance">Hide Balance</string>
     <string name="ministatement">Mini-statement</string>
     <string name="fund_transfer">Fund Transfer</string>
+    <string name="bill_payment">Bill Payment</string>
     <string name="momo_transfer">Mobile Money Transfer</string>
     <string name="where_to_ft">Where would you like to transfer funds to?</string>
+    <string name="which_bill">Which bill would you like to pay today?</string>
     <string name="where_to_momo">Where would you like to send money to??</string>
     <string name="confirm_balance_enquiry">Confirm Balance Enquiry</string>
     <string name="confirm_mini_enquiry">Confirm Mini-statement Request</string>
@@ -114,6 +116,9 @@
     <string name="confirm_airtime">Confirm Airtime Purchase Request</string>
     <string name="confirm_send">Confirm %1$s Request</string>
     <string name="confirm_ft">Confirm %1$s Transfer Request</string>
+    <string name="biller_payment">Bill Payment</string>
+    <string name="provide_biller_acc">Provide your %1$s account number to proceed</string>
+    <string name="provide_biller_payment">Provide the following payment details</string>
     <string name="start_date">Start Date</string>
     <string name="end_date">End Date</string>
     <string name="your_statement_will_be_sent_to_your_registered_email_address">Your statement will be sent to your registered email address.</string>
@@ -134,6 +139,8 @@
     <string name="send_from">Send From:</string>
     <string name="transfer_to">Transfer To:</string>
     <string name="transfer_from">Transfer From:</string>
+    <string name="account_number">Account Number</string>
+    <string name="pay_from">Pay From:</string>
 
 
 </resources>
